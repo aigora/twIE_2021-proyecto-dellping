@@ -6,7 +6,7 @@ int main()
     char op;
 
     do{
-    printf("VIAJA CON DELLPING, EXITO ASEGURADO \n \n \n");
+    printf("VIAJA CON DELLPING, EXITO ASEGURADOOOOOO \n \n \n");
     printf("Seleccione la opcion deseada para la eleccion de su viaje: \n ");
     printf("a.Fechas deseadas para viajar\n b.Cantidad de personas que van a viajar\n c.Preferencias de viaje\n d.Destinos disponibles\n e.Ver tarifas disponibles\n f.Salir del programa\n");
     scanf("%c", &op);
