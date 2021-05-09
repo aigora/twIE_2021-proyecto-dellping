@@ -1,0 +1,11 @@
+-------- DATOS DEL VIAJE --------
+ - Fecha de entrda: 5/7/2021
+ - Fecha de salida: 9/7/2021
+        La duracion de su viaje sera de 4 dias
+ - N£mero de personas: 7
+ - Clase de viaje: Turismo rural
+ - Destino seleccionado: Sierra Nevada
+ - Tarifa: Familia numerosa especial
+        PRECIO sin descuento: 3612.000000 EUR
+        PRECIO con descuento: 1806.000000 EUR
+
