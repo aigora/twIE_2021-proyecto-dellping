@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-int d0, m0, a0, d1, m1, a1, time, np, clase, tar, dest;
+int d0, m0, a0, d1, m1, a1, time, np, clase, tar, dest, resumen;
 // d, m, a son: dia, mes y año de inicio y fin consecutivamente. time es la variable tiempo de transcurso del viaje. np el numero de personas. clase es el tipo de turismo escojido. tar la tarifa.
 float price0, price1, price2;
 float tarifa;
@@ -30,7 +30,7 @@ int dias(){
 }
 
 float precio(){
-    price1 = np * price0;
+    price1 = np * price0 * time;
     price2 = price1 * tarifa;
 }
 
@@ -55,11 +55,33 @@ int main()
     do{
    system("cls");
     printf("VIAJA CON DELLPING, %cXITO ASEGURADO\n\n", 144);
+
     precio();
+    dias();
     showData();
-    printf("Seleccione la opci%cn deseada para la elecci%cn de su viaje: \n", 162, 162);
+printf("Seleccione la opci%cn deseada para la elecci%cn de su viaje: \n", 162, 162);
     printf(" a.Fechas deseadas para viajar\n b.Cantidad de personas que van a viajar\n c.Preferencias de viaje\n d.Ver tarifas disponibles\n     e.Salir del programa\n\n");
     scanf("%c", &op);
+    FILE *pf;
+    pf = fopen("Viaje.txt", "w");
+        if(pf == NULL) printf("Ha habido un error al abrir el archivo");
+        else {
+            fprintf(pf, "-------- DATOS DEL VIAJE --------\n");
+            fprintf(pf," - Fecha de entrda: %d/%d/%d\n", d0, m0, a0);
+            fprintf(pf," - Fecha de salida: %d/%d/%d\n", d1, m1, a1);
+            fprintf(pf,"        La duracion de su viaje sera de %d dias\n", time);
+            fprintf(pf," - N%cmero de personas: %d\n", 163, np);
+            fprintf(pf," - Clase de viaje: %s\n", tipo);
+            fprintf(pf," - Destino seleccionado: %s\n", destino);
+            fprintf(pf," - Tarifa: %s\n", descuento);
+            fprintf(pf,"        PRECIO sin descuento: %f EUR\n", price1);
+            fprintf(pf,"        PRECIO con descuento: %f EUR\n\n", price2);
+        }
+    fclose(pf);
+
+
+
+
 
     switch(op)
     {
@@ -112,8 +134,8 @@ int main()
         printf("HA SELECCIONADO LA OPCION PERSONAS QUE VAN A VIAJAR. \n");
         printf("Introduzca el numero de personas que van a participar en el viaje: ");
             scanf("%d", &np);
-        printf("Pulse un numero si desea volver al menu principal. \n");
-        scanf("%d", &num);
+        //printf("Pulse un numero si desea volver al menu principal. \n");
+        //scanf("%d", &num);
         break;
 
 
@@ -213,6 +235,9 @@ int main()
 
     }while(op!='f' && op!='F');
 
+    printf("Si desea consultar un resumen de su viaje pulse 0: ");
+    scanf("%d", &resumen);
+        if(resumen == 0)
 
 
     return 0;

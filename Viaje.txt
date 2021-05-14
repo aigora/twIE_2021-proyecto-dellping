@@ -1,16 +1,11 @@
-Registro de usuario:
-   Nombre:   Ñ4X²ÿ
-   Email: ÿ
-
-
 -------- DATOS DEL VIAJE --------
- - Fecha de entrda: -1302684096/32767/0
- - Fecha de salida: 1/0/-1302595024
-        La duracion de su viaje sera de 0 dias
+ - Fecha de entrda: 5/7/2021
+ - Fecha de salida: 9/7/2021
+        La duracion de su viaje sera de 4 dias
  - N£mero de personas: 7
  - Clase de viaje: Turismo rural
- - Destino seleccionado: Picos de Europa
- - Tarifa: 
-        PRECIO sin descuento: -0.000000 EUR
-        PRECIO con descuento: 0.000000 EUR
+ - Destino seleccionado: Sierra Nevada
+ - Tarifa: Familia numerosa especial
+        PRECIO sin descuento: 3612.000000 EUR
+        PRECIO con descuento: 1806.000000 EUR
 
